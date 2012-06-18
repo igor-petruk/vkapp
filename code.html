@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="http://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+</head>
+<body>
+<div onclick="sendwallpost('Мой текст сообщения');">отправить</div>
+<script language="javascript">
+    VK.init({
+        apiId: 3002875 // id созданного вами приложения вконтакте 
+    });
+
+    function sendwallpost(mydata) {
+        VK.api("wall.post", {
+            owner_id: '',
+            message: mydata
+        }, function (data) {});
+    }
+</script>
+</body>
+</html>
